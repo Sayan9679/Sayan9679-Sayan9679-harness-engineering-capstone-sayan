@@ -1,0 +1,30 @@
+System 2 — context strategy official suite
+path: evidences/system_2_context_strategy/tests.txt
+
+============================= test session starts ==============================
+platform linux -- Python 3.13.0, pytest-9.1.1, pluggy-1.6.0 -- /workspace/Engineer a Long-Conversation Context Strategy for a Retail Support Copilot/.venv/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /workspace/Engineer a Long-Conversation Context Strategy for a Retail Support Copilot/04-assemble-and-locate/solution
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 17 items
+
+tests/test_transcript.py::test_transcript_loader_turn_count PASSED       [  5%]
+tests/test_transcript.py::test_transcript_loader_partition_boundaries PASSED [ 11%]
+tests/test_transcript.py::test_transcript_loader_token_count_in_engineered_range PASSED [ 17%]
+tests/test_transcript.py::test_active_turns_accessor PASSED              [ 23%]
+tests/test_transcript.py::test_canonical_token_function_is_used_everywhere PASSED [ 29%]
+tests/test_pruner.py::test_lookup_order_fixture_has_at_least_40_fields PASSED [ 35%]
+tests/test_pruner.py::test_pruner_keeps_exactly_the_contracted_set PASSED [ 41%]
+tests/test_pruner.py::test_pruned_output_under_200_tokens PASSED         [ 47%]
+tests/test_pruner.py::test_pruner_raises_on_missing_required_field PASSED [ 52%]
+tests/test_assemble.py::test_assemble_section_order_exact PASSED         [ 58%]
+tests/test_assemble.py::test_active_segment_byte_exact PASSED            [ 64%]
+tests/test_assemble.py::test_no_interleaving_of_resolved_and_active PASSED [ 70%]
+tests/test_antipatterns.py::test_pruner_has_no_anthropic_import PASSED   [ 76%]
+tests/test_antipatterns.py::test_only_tokens_module_uses_count_tokens_or_heuristic PASSED [ 82%]
+tests/test_antipatterns.py::test_assemble_module_section_order_contract PASSED [ 88%]
+tests/test_antipatterns.py::test_assembled_context_active_segment_byte_exact PASSED [ 94%]
+tests/test_antipatterns.py::test_budget_json_section_counts_sum_consistently PASSED [100%]
+
+============================== 17 passed in 0.42s ==============================
